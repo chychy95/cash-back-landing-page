@@ -1,0 +1,1354 @@
+<!doctype html>
+<html lang="en-GB">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description"
+    content="CashBack UK — discover cashback offers across groceries, fashion, travel and more." />
+  <title>CashBack UK — Earn Cashback on UK Shopping</title>
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1447290976320061');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1447290976320061&ev=PageView&noscript=1" /></noscript>
+  <!-- End Meta Pixel Code -->
+
+  <style>
+    :root {
+      /* Brand palette (edit these to match your exact colours) */
+      --bg: #071327;
+      /* deep navy */
+      --panel: #0B1D3B;
+      /* navy panel */
+      --card: rgba(255, 255, 255, .06);
+      --card2: rgba(255, 255, 255, .09);
+      --text: #EAF2FF;
+      /* near-white */
+      --muted: rgba(234, 242, 255, .72);
+      --line: rgba(234, 242, 255, .14);
+      --accent: #41D6A3;
+      /* soft green */
+      --accent2: #71F2C0;
+      /* lighter accent */
+      --warn: #FFD56A;
+      --shadow: 0 18px 50px rgba(0, 0, 0, .35);
+
+      --radius: 18px;
+      --radius2: 26px;
+      --max: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--text);
+      background:
+        radial-gradient(900px 520px at 22% 8%, rgba(65, 214, 163, .18), transparent 55%),
+        radial-gradient(700px 460px at 80% 16%, rgba(113, 242, 192, .12), transparent 56%),
+        radial-gradient(700px 520px at 50% 95%, rgba(255, 213, 106, .10), transparent 60%),
+        var(--bg);
+      line-height: 1.35;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 22px 18px 90px;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 12px 14px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, .08), rgba(255, 255, 255, .03));
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      box-shadow: var(--shadow);
+      position: sticky;
+      top: 12px;
+      z-index: 50;
+      backdrop-filter: blur(10px);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 220px;
+    }
+
+    .logo {
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      background: radial-gradient(circle at 25% 30%, var(--accent2), var(--accent));
+      display: grid;
+      place-items: center;
+      box-shadow: 0 10px 26px rgba(65, 214, 163, .28);
+      border: 1px solid rgba(255, 255, 255, .18);
+    }
+
+    .logo svg {
+      width: 20px;
+      height: 20px;
+      opacity: .95;
+    }
+
+    .brand h1 {
+      font-size: 14px;
+      margin: 0;
+      letter-spacing: .2px;
+    }
+
+    .brand p {
+      margin: 0;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .navlinks {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .navlinks a {
+      font-size: 13px;
+      color: var(--muted);
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+    }
+
+    .navlinks a:hover {
+      border-color: var(--line);
+      color: var(--text);
+      background: rgba(255, 255, 255, .04);
+    }
+
+    .cta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn {
+      border: none;
+      cursor: pointer;
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-weight: 700;
+      letter-spacing: .2px;
+      transition: transform .08s ease, filter .2s ease, background .2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      white-space: nowrap;
+    }
+
+    .btn:active {
+      transform: translateY(1px) scale(.99);
+    }
+
+    .btn-primary {
+      background: linear-gradient(180deg, var(--accent2), var(--accent));
+      color: #04120F;
+      box-shadow: 0 18px 40px rgba(65, 214, 163, .25);
+    }
+
+    .btn-ghost {
+      background: rgba(255, 255, 255, .06);
+      color: var(--text);
+      border: 1px solid var(--line);
+    }
+
+    .pill {
+      font-size: 12px;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, .06);
+      border: 1px solid var(--line);
+      color: var(--muted);
+    }
+
+    /* Hero */
+    .hero {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 22px;
+      margin-top: 18px;
+      align-items: stretch;
+    }
+
+    .panel {
+      background: linear-gradient(180deg, rgba(255, 255, 255, .08), rgba(255, 255, 255, .03));
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .hero-left {
+      padding: 28px;
+    }
+
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 12px;
+      color: var(--muted);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 7px 10px;
+      background: rgba(255, 255, 255, .04);
+    }
+
+    .kicker b {
+      color: var(--text);
+    }
+
+    .hero h2 {
+      margin: 14px 0 10px;
+      font-size: 38px;
+      line-height: 1.05;
+      letter-spacing: -0.6px;
+    }
+
+    .hero p {
+      margin: 0 0 16px;
+      color: var(--muted);
+      font-size: 15.5px;
+      max-width: 56ch;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+      align-items: center;
+    }
+
+    /* Email capture (hero) */
+    .leadbox {
+      margin-top: 14px;
+      padding: 14px;
+      border-radius: 18px;
+      border: 1px solid rgba(255, 255, 255, .16);
+      background: rgba(255, 255, 255, .05);
+    }
+
+    .leadbox h4 {
+      margin: 0 0 8px;
+      font-size: 14px;
+      letter-spacing: .1px;
+    }
+
+    .leadrow {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .leadrow input {
+      flex: 1 1 220px;
+      min-width: 220px;
+      padding: 12px 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, .16);
+      background: rgba(0, 0, 0, .18);
+      color: var(--text);
+      outline: none;
+      font-size: 14px;
+    }
+
+    .leadrow input::placeholder {
+      color: rgba(234, 242, 255, .55);
+    }
+
+    .leadrow button {
+      padding: 12px 14px;
+    }
+
+    .leadmeta {
+      margin-top: 10px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+
+    .consent {
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+      font-size: 12px;
+      color: rgba(234, 242, 255, .70);
+    }
+
+    .consent input {
+      margin-top: 2px;
+    }
+
+    .leadnote {
+      font-size: 12px;
+      color: rgba(234, 242, 255, .60);
+    }
+
+    .toast {
+      margin-top: 10px;
+      padding: 10px 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(65, 214, 163, .30);
+      background: rgba(65, 214, 163, .10);
+      color: rgba(234, 242, 255, .92);
+      font-size: 12px;
+      display: none;
+    }
+
+    .fineprint {
+      margin-top: 10px;
+      font-size: 12px;
+      color: rgba(234, 242, 255, .58);
+    }
+
+    /* “Phone mockup” graphic */
+    .hero-right {
+      position: relative;
+      display: grid;
+      place-items: center;
+      padding: 22px;
+    }
+
+    .phone {
+      width: min(360px, 92%);
+      aspect-ratio: 10/19;
+      border-radius: 34px;
+      border: 1px solid rgba(255, 255, 255, .20);
+      background:
+        radial-gradient(400px 260px at 40% 10%, rgba(65, 214, 163, .22), transparent 55%),
+        linear-gradient(180deg, rgba(255, 255, 255, .09), rgba(255, 255, 255, .03));
+      box-shadow: 0 30px 80px rgba(0, 0, 0, .55);
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Small image-style strip (original icons) */
+    .imgstrip {
+      width: min(360px, 92%);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .imgcard {
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, .14);
+      background: rgba(255, 255, 255, .04);
+      padding: 10px;
+      display: grid;
+      place-items: center;
+      gap: 6px;
+    }
+
+    .imgcard svg {
+      width: 28px;
+      height: 28px;
+      opacity: .95;
+    }
+
+    .imgcard span {
+      font-size: 11px;
+      color: rgba(234, 242, 255, .78);
+      text-align: center;
+    }
+
+    .phone:before {
+      content: "";
+      position: absolute;
+      top: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      height: 22px;
+      background: rgba(0, 0, 0, .35);
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, .12);
+    }
+
+    .screen {
+      padding: 50px 16px 16px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .screen .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 12px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, .06);
+      border: 1px solid rgba(255, 255, 255, .12);
+    }
+
+    .row .label {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .row .value {
+      font-weight: 800;
+      letter-spacing: .2px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 10px;
+      background: rgba(65, 214, 163, .12);
+      border: 1px solid rgba(65, 214, 163, .30);
+      color: var(--text);
+      border-radius: 999px;
+      font-size: 12px;
+    }
+
+    /* Logo strip */
+    .logos {
+      margin-top: 14px;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 10px;
+      opacity: .95;
+    }
+
+    .logo-chip {
+      border: 1px dashed rgba(255, 255, 255, .22);
+      background: rgba(255, 255, 255, .03);
+      border-radius: 14px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      color: rgba(234, 242, 255, .65);
+      font-size: 12px;
+    }
+
+    /* Sections */
+    .section {
+      margin-top: 18px;
+    }
+
+    .section h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      letter-spacing: -.2px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .card {
+      padding: 16px;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, .05);
+    }
+
+    .card h4 {
+      margin: 8px 0 6px;
+      font-size: 14px;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: rgba(65, 214, 163, .12);
+      border: 1px solid rgba(65, 214, 163, .22);
+    }
+
+    .icon svg {
+      width: 20px;
+      height: 20px;
+      opacity: .95;
+    }
+
+    /* Offers + filter */
+    .offers-panel {
+      padding: 18px;
+    }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, .03);
+      margin-bottom: 12px;
+    }
+
+    .filters .left,
+    .filters .right {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .field {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      padding: 9px 10px;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, .14);
+      background: rgba(255, 255, 255, .05);
+    }
+
+    .field input,
+    .field select {
+      border: none;
+      outline: none;
+      background: transparent;
+      color: var(--text);
+      font-size: 13px;
+    }
+
+    .field input::placeholder {
+      color: rgba(234, 242, 255, .55);
+    }
+
+    .field select option {
+      color: #081427;
+    }
+
+    .offers-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .offer {
+      padding: 16px;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255, 255, 255, .06), rgba(255, 255, 255, .03));
+      display: grid;
+      gap: 10px;
+      min-height: 188px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .offer:after {
+      content: "";
+      position: absolute;
+      inset: auto -40px -40px auto;
+      width: 140px;
+      height: 140px;
+      background: radial-gradient(circle at 30% 30%, rgba(65, 214, 163, .30), transparent 60%);
+      transform: rotate(25deg);
+      pointer-events: none;
+    }
+
+    .offer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .offer-title {
+      font-weight: 900;
+      letter-spacing: .1px;
+    }
+
+    .tag {
+      font-size: 11px;
+      padding: 6px 9px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, .16);
+      background: rgba(255, 255, 255, .05);
+      color: rgba(234, 242, 255, .78);
+      white-space: nowrap;
+    }
+
+    .payout {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+
+    .payout b {
+      font-size: 22px;
+    }
+
+    .payout span {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .offer p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .offer-actions {
+      margin-top: auto;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .mini {
+      font-size: 12px;
+      color: rgba(234, 242, 255, .62);
+    }
+
+    /* FAQ */
+    details {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 12px 14px;
+      background: rgba(255, 255, 255, .04);
+    }
+
+    details+details {
+      margin-top: 10px;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 800;
+    }
+
+    details p {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 18px;
+      padding: 16px 18px;
+      border-radius: var(--radius2);
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, .03);
+      color: rgba(234, 242, 255, .70);
+      font-size: 12px;
+    }
+
+    footer a {
+      text-decoration: underline;
+      color: rgba(234, 242, 255, .88);
+    }
+
+    /* Sticky CTA (mobile) */
+    .sticky-cta {
+      position: fixed;
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      z-index: 80;
+      display: none;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, .18);
+      background: rgba(9, 20, 42, .78);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 18px 50px rgba(0, 0, 0, .45);
+    }
+
+    .sticky-cta .text {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      min-width: 0;
+    }
+
+    .sticky-cta .text b {
+      font-size: 13px;
+    }
+
+    .sticky-cta .text span {
+      font-size: 12px;
+      color: rgba(234, 242, 255, .68);
+    }
+
+    /* Responsive */
+    @media (max-width: 980px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .logos {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+
+      .offers-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .navlinks {
+        display: none;
+      }
+
+      .sticky-cta {
+        display: flex;
+      }
+
+      .brand {
+        min-width: unset;
+      }
+    }
+
+    /* HubSpot form styling (match existing hero leadbox) */
+    #hsLeadForm .hs-form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin: 0;
+    }
+
+    #hsLeadForm .hs-form fieldset {
+      border: 0;
+      padding: 0;
+      margin: 0;
+      min-width: 0;
+      flex: 1 1 220px;
+    }
+
+    #hsLeadForm .hs-form .hs-form-field {
+      margin: 0;
+    }
+
+    /* Hide labels to keep the clean "single line" look */
+    #hsLeadForm .hs-form label {
+      display: none !important;
+    }
+
+    /* Inputs */
+    #hsLeadForm .hs-input,
+    #hsLeadForm input[type="email"],
+    #hsLeadForm input[type="text"],
+    #hsLeadForm input[type="tel"],
+    #hsLeadForm select,
+    #hsLeadForm textarea {
+      width: 100% !important;
+      min-width: 220px;
+      padding: 12px 12px !important;
+      border-radius: 14px !important;
+      border: 1px solid rgba(255, 255, 255, .16) !important;
+      background: rgba(0, 0, 0, .18) !important;
+      color: var(--text) !important;
+      outline: none !important;
+      font-size: 14px !important;
+      box-shadow: none !important;
+    }
+
+    #hsLeadForm input::placeholder,
+    #hsLeadForm textarea::placeholder {
+      color: rgba(234, 242, 255, .55) !important;
+    }
+
+    /* Submit button */
+    #hsLeadForm .hs-submit {
+      flex: 0 0 auto;
+    }
+
+    #hsLeadForm .hs-button,
+    #hsLeadForm input[type="submit"] {
+      border: none !important;
+      cursor: pointer !important;
+      padding: 12px 14px !important;
+      border-radius: 999px !important;
+      font-weight: 700 !important;
+      letter-spacing: .2px !important;
+      background: linear-gradient(180deg, var(--accent2), var(--accent)) !important;
+      color: #04120F !important;
+      box-shadow: 0 18px 40px rgba(65, 214, 163, .25) !important;
+      transition: transform .08s ease, filter .2s ease, background .2s ease;
+      white-space: nowrap;
+      height: auto !important;
+    }
+
+    #hsLeadForm .hs-button:active,
+    #hsLeadForm input[type="submit"]:active {
+      transform: translateY(1px) scale(.99);
+    }
+
+    /* Errors */
+    #hsLeadForm .hs-error-msgs,
+    #hsLeadForm .hs-error-msg {
+      color: rgba(255, 213, 106, .95) !important;
+      font-size: 12px !important;
+      margin: 6px 0 0 !important;
+    }
+
+    #hsLeadForm .submitted-message {
+      color: rgba(234, 242, 255, .92) !important;
+      font-size: 12px !important;
+      margin-top: 8px !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <!-- Top Bar -->
+
+    <!-- Hero -->
+    <section class="hero section" id="signup">
+      <div class="panel hero-left">
+        <div class="kicker">
+          <span class="badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 2l3 7 7 3-7 3-3 7-3-7-7-3 7-3 3-7z" stroke="currentColor" stroke-width="2"
+                stroke-linejoin="round" />
+            </svg>
+            UK-only offers
+          </span>
+          <span>Simple • Fast • No fluff</span>
+        </div>
+
+        <h2>Earn cashback on everyday UK shopping.</h2>
+        <p>
+          Browse cashback offers by category, pick what fits you, and start earning rewards.
+          This page is designed to be clear, mobile-friendly, and conversion-focused.
+        </p>
+
+        <div class="hero-actions">
+          <!-- Replace # with your actual affiliate/offer link -->
+          <a class="btn btn-primary" href="#" id="primaryCta">
+            Start earning cashback
+            <span aria-hidden="true">→</span>
+          </a>
+          <a class="btn btn-ghost" href="#offers">View offers</a>
+          <span class="pill" title="Tip: keep claims realistic and compliant.">No guaranteed income</span>
+        </div>
+
+        <div class="fineprint">
+          <b>Note:</b> Earnings depend on the offer and completion requirements.
+          Always read the terms on the offer page.
+        </div>
+
+        <div class="fineprint" style="margin-top:8px;">
+          <b>Images:</b> This page uses original graphics by default. If you have licensed CashBack UK images or
+          screenshots you’re allowed to use, upload them and I’ll place them in the hero.
+        </div>
+
+        <div class="section" style="margin-top:16px;">
+          <h3 style="margin-bottom:10px;">Popular UK brands (examples)</h3>
+          <div class="logos" aria-label="Brand examples">
+            <div class="logo-chip">Groceries</div>
+            <div class="logo-chip">Travel</div>
+            <div class="logo-chip">Fashion</div>
+            <div class="logo-chip">Food</div>
+            <div class="logo-chip">Surveys</div>
+            <div class="logo-chip">Trials</div>
+          </div>
+          <div class="fineprint">Category chips (safe). If you have licensed brand logos, we can swap them in.</div>
+          <div class="leadbox" id="leadbox">
+            <h4>Get the best cashback picks in your inbox</h4>
+
+            <!-- HubSpot form mount (styled to match this page) -->
+            <div id="hsLeadForm"></div>
+
+            <div class="toast" id="leadToast">✅ Thanks! Check your inbox. Redirecting you to the offers…</div>
+
+            <div class="leadmeta" style="margin-top:10px;">
+              <div class="leadnote">We don’t sell your data. Terms vary by offer.</div>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+
+      <div class="panel hero-right" aria-label="Cashback preview graphic">
+        <div class="phone" role="img" aria-label="Illustration of cashback balance on a phone">
+          <div class="screen">
+            <img src="assets/images/418b87ed-1821-45c2-8e75-47e0756d4c11.png" alt="Cashback app preview"
+              style="width: 100%; border-radius: 12px; margin-bottom: 8px;" />
+            <div class="row">
+              <div>
+                <div class="label">Estimated cashback</div>
+                <div class="value">£24.60</div>
+              </div>
+              <div class="tag">This week</div>
+            </div>
+
+            <div class="row">
+              <div>
+                <div class="label">Offers completed</div>
+                <div class="value">3</div>
+              </div>
+              <div class="tag">Verified</div>
+            </div>
+
+            <div class="row">
+              <div>
+                <div class="label">Next payout</div>
+                <div class="value">PayPal</div>
+              </div>
+              <div class="tag">Secure</div>
+            </div>
+
+            <div class="row" style="border-color: rgba(65,214,163,.35); background: rgba(65,214,163,.10);">
+              <div>
+                <div class="label">Tip</div>
+                <div class="value">Use filters →</div>
+              </div>
+              <div class="tag" style="border-color: rgba(65,214,163,.40);">Fast</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="imgstrip" aria-label="Offer visuals">
+          <div class="imgcard" title="Shopping">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M6 7h15l-1.2 12H7.2L6 7Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+              <path d="M9 10V6a3 3 0 0 1 6 0v4" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
+            <span>Shop</span>
+          </div>
+          <div class="imgcard" title="Cashback">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 2v20" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              <path d="M17 6.5c0-1.9-2.2-3.5-5-3.5S7 4.6 7 6.5 9.2 10 12 10s5 1.6 5 3.5S14.8 17 12 17s-5-1.6-5-3.5"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
+            <span>Earn</span>
+          </div>
+          <div class="imgcard" title="Payout">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M4 8h16v10H4V8Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+              <path d="M7 8V6a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" />
+              <path d="M8 13h8" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
+            <span>Payout</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="section panel" id="how" style="padding:18px;">
+      <h3>How it works</h3>
+      <div class="grid-3">
+        <div class="card">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M4 7h16M7 4v6m10-6v6M6 13h12v7H6v-7z" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" />
+            </svg>
+          </div>
+          <h4>1) Choose an offer</h4>
+          <p>Pick a category you like (groceries, fashion, travel, surveys, trials, etc.).</p>
+        </div>
+
+        <div class="card">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M12 21s-7-4.4-7-10a4 4 0 017-2 4 4 0 017 2c0 5.6-7 10-7 10z" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <h4>2) Complete requirements</h4>
+          <p>Follow the steps on the offer page carefully. Terms vary by offer.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M20 7L9.5 17.5 4 12" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+          <h4>3) Receive cashback</h4>
+          <p>Cashback may take time to track/confirm. Payout options depend on the platform.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Offers + filter -->
+    <section class="section panel offers-panel" id="offers">
+      <h3>Browse offers</h3>
+
+      <div class="filters" role="region" aria-label="Offer filters">
+        <div class="left">
+          <div class="field">
+            <span class="mini" aria-hidden="true">Search</span>
+            <input id="q" type="search" placeholder="e.g., groceries, travel, survey…" />
+          </div>
+
+          <div class="field">
+            <span class="mini" aria-hidden="true">Category</span>
+            <select id="cat">
+              <option value="all">All</option>
+              <option value="Groceries">Groceries</option>
+              <option value="Fashion">Fashion</option>
+              <option value="Travel">Travel</option>
+              <option value="Food">Food</option>
+              <option value="Surveys">Surveys</option>
+              <option value="Trials">Trials</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <span class="mini" aria-hidden="true">Payout</span>
+            <select id="payout">
+              <option value="all">Any</option>
+              <option value="0-5">£0–£5</option>
+              <option value="5-15">£5–£15</option>
+              <option value="15+">£15+</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="right">
+          <button class="btn btn-ghost" id="resetBtn" type="button">Reset</button>
+          <a class="btn btn-primary"
+            href="https://noklnk.com/x/6026051?subid1=&subid2=&subid3=&subid4=&subid5=&subid7=&subid8=&subid9=&subid10=&subid11=&subid12=&subid13=&subid14=&subid15=&subid16=&creative_id=&creative_name=&source_id=&google_aid=&ios_ifa="
+            id="offersCta">Go to sign up →</a>
+        </div>
+      </div>
+
+      <div class="offers-grid" id="offerGrid" aria-live="polite"></div>
+
+      <div class="fineprint" style="margin-top:10px;">
+        Tip: Replace the sample offers below with your real offers and link each “Open offer” button to your tracking
+        URL.
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section panel" id="faq" style="padding:18px;">
+      <h3>FAQ</h3>
+
+      <details>
+        <summary>Is this free?</summary>
+        <p>Some cashback platforms are free to join, while some offers may require a purchase or trial. Always read the
+          offer terms before starting.</p>
+      </details>
+
+      <details>
+        <summary>How fast do I get paid?</summary>
+        <p>Tracking and confirmation times vary. Some offers confirm quickly, others can take longer depending on the
+          merchant.</p>
+      </details>
+
+      <details>
+        <summary>Do you guarantee earnings?</summary>
+        <p>No. Earnings depend on the offers you choose and whether you meet the requirements. This page is
+          informational and includes affiliate links.</p>
+      </details>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:space-between; align-items:flex-start;">
+        <div style="max-width:70ch;">
+          <b>Affiliate disclosure:</b> This site may contain affiliate links. If you click and complete an offer, the
+          site owner may earn a commission at no extra cost to you.
+          Earnings are not guaranteed and depend on offer requirements and eligibility.
+        </div>
+        <div>
+          <div><a href="#" aria-label="Privacy policy">Privacy Policy</a></div>
+          <div><a href="#" aria-label="Cookie policy">Cookie Policy</a></div>
+          <div><a href="#" aria-label="Contact">Contact</a></div>
+        </div>
+      </div>
+      <div style="margin-top:10px; opacity:.9;">© <span id="year"></span> CashBack UK • Built for GitHub Pages</div>
+    </footer>
+  </div>
+
+  <!-- Sticky CTA (mobile) -->
+  <div class="sticky-cta" role="region" aria-label="Quick action">
+    <div class="text">
+      <b>Ready to start?</b>
+      <span>Use filters • Pick an offer</span>
+    </div>
+    <a class="btn btn-primary"
+      href="https://noklnk.com/x/6026051?subid1=&subid2=&subid3=&subid4=&subid5=&subid7=&subid8=&subid9=&subid10=&subid11=&subid12=&subid13=&subid14=&subid15=&subid16=&creative_id=&creative_name=&source_id=&google_aid=&ios_ifa="
+      id="stickyBtn">Start earning →</a>
+  </div>
+
+  <script>
+    // ====== EDIT THESE LINKS ======
+    // Put your REAL affiliate/tracking link here:
+    const SIGNUP_LINK = "https://noklnk.com/x/6026051?subid1=&subid2=&subid3=&subid4=&subid5=&subid7=&subid8=&subid9=&subid10=&subid11=&subid12=&subid13=&subid14=&subid15=&subid16=&creative_id=&creative_name=&source_id=&google_aid=&ios_ifa=";
+
+    // OPTIONAL (recommended): send emails to a form backend (Formspree, Getform, Mailchimp, HubSpot, etc.)
+    // Example (Formspree): https://formspree.io/f/xxxxxx
+    const EMAIL_WEBHOOK = "";
+
+    // Set CTA links
+    const ctaIds = ["primaryCta", "topCtaBtn", "offersCta", "stickyBtn"];
+    ctaIds.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.href = SIGNUP_LINK;
+    });
+
+    // ====== SAMPLE OFFERS (REPLACE WITH YOUR REAL ONES) ======
+    // payout is numeric (£) to support filtering
+    const offers = [
+      {
+        title: "Grocery cashback deal",
+        category: "Groceries",
+        payout: 6,
+        time: "5–10 min",
+        note: "Shop via the offer link and follow steps to qualify.",
+        link: SIGNUP_LINK
+      },
+      {
+        title: "Fashion store cashback",
+        category: "Fashion",
+        payout: 4,
+        time: "3–8 min",
+        note: "Cashback depends on store and basket size.",
+        link: SIGNUP_LINK
+      },
+      {
+        title: "Travel booking cashback",
+        category: "Travel",
+        payout: 18,
+        time: "10–15 min",
+        note: "Great for flights/hotels when available.",
+        link: SIGNUP_LINK
+      },
+      {
+        title: "Food delivery offer",
+        category: "Food",
+        payout: 5,
+        time: "5–10 min",
+        note: "Check eligibility and any minimum spend requirements.",
+        link: SIGNUP_LINK
+      },
+      {
+        title: "Survey / signup offer",
+        category: "Surveys",
+        payout: 2,
+        time: "3–6 min",
+        note: "Complete profile details accurately for approval.",
+        link: SIGNUP_LINK
+      },
+      {
+        title: "Free trial (read terms)",
+        category: "Trials",
+        payout: 12,
+        time: "6–12 min",
+        note: "Only join if you understand trial terms and cancellation rules.",
+        link: SIGNUP_LINK
+      },
+    ];
+
+    const grid = document.getElementById("offerGrid");
+    const q = document.getElementById("q");
+    const cat = document.getElementById("cat");
+    const payout = document.getElementById("payout");
+    const resetBtn = document.getElementById("resetBtn");
+    const offerCountPill = document.getElementById("offerCountPill");
+
+    function payoutBucket(value) {
+      if (value === "0-5") return (n) => n >= 0 && n <= 5;
+      if (value === "5-15") return (n) => n > 5 && n <= 15;
+      if (value === "15+") return (n) => n > 15;
+      return () => true;
+    }
+
+    function render(list) {
+      grid.innerHTML = "";
+      if (!list.length) {
+        grid.innerHTML = `
+          <div class="offer" style="grid-column: 1 / -1;">
+            <div class="offer-top">
+              <div class="offer-title">No matches</div>
+              <span class="tag">Try resetting</span>
+            </div>
+            <p>Change your filters or search term to see more offers.</p>
+            <div class="offer-actions">
+              <button class="btn btn-ghost" type="button" id="resetInline">Reset filters</button>
+            </div>
+          </div>
+        `;
+        document.getElementById("resetInline").onclick = () => {
+          q.value = ""; cat.value = "all"; payout.value = "all"; apply();
+        };
+        if (offerCountPill) offerCountPill.textContent = "0 offers";
+        return;
+      }
+
+      list.forEach(o => {
+        const el = document.createElement("div");
+        el.className = "offer";
+        el.innerHTML = `
+          <div class="offer-top">
+            <div>
+              <div class="offer-title">${escapeHtml(o.title)}</div>
+              <div class="mini">${escapeHtml(o.time)} • Category: ${escapeHtml(o.category)}</div>
+            </div>
+            <span class="tag">${escapeHtml(o.category)}</span>
+          </div>
+
+          <div class="payout">
+            <b>£${Number(o.payout).toFixed(0)}</b>
+            <span>estimated cashback</span>
+          </div>
+
+          <p>${escapeHtml(o.note)}</p>
+
+          <div class="offer-actions">
+            <a class="btn btn-primary" href="${o.link}" target="_blank" rel="noopener">Open offer →</a>
+            <span class="mini">Terms apply</span>
+          </div>
+        `;
+        grid.appendChild(el);
+      });
+
+      if (offerCountPill) offerCountPill.textContent = `${list.length} offer${list.length === 1 ? "" : "s"}`;
+    }
+
+    function apply() {
+      const term = (q.value || "").trim().toLowerCase();
+      const catVal = cat.value;
+      const payoutVal = payout.value;
+
+      const bucketFn = payoutBucket(payoutVal);
+
+      const filtered = offers.filter(o => {
+        const matchesTerm = !term || (
+          o.title.toLowerCase().includes(term) ||
+          o.category.toLowerCase().includes(term) ||
+          (o.note || "").toLowerCase().includes(term)
+        );
+        const matchesCat = (catVal === "all") || (o.category === catVal);
+        const matchesPayout = bucketFn(Number(o.payout));
+        return matchesTerm && matchesCat && matchesPayout;
+      });
+
+      render(filtered);
+    }
+
+    function escapeHtml(str) {
+      return String(str)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+
+    q.addEventListener("input", apply);
+    cat.addEventListener("change", apply);
+    payout.addEventListener("change", apply);
+
+    resetBtn.addEventListener("click", () => {
+      q.value = ""; cat.value = "all"; payout.value = "all"; apply();
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Initial render
+    apply();
+  </script>
+  <!-- HubSpot Forms (v2) -->
+  <script charset="utf-8" type="text/javascript" src="https://js-eu1.hsforms.net/forms/v2.js"></script>
+  <script>
+    // Mount HubSpot form into the hero leadbox and keep our page styling/layout.
+    window.addEventListener("load", function () {
+      if (!window.hbspt || !hbspt.forms) return;
+
+      hbspt.forms.create({
+        region: "eu1",
+        portalId: "147478352",
+        formId: "60b326b3-2540-4c76-a176-dc2d18caf99c",
+        target: "#hsLeadForm",
+        // Disable HubSpot's default injected styles so our CSS controls the look.
+        css: "",
+        onFormReady: function (form) {
+          try {
+            // Add placeholder if HubSpot label is hidden by CSS
+            const email = form.querySelector('input[type="email"]');
+            if (email && !email.getAttribute("placeholder")) {
+              email.setAttribute("placeholder", "Enter your email");
+            }
+          } catch (_) { }
+        },
+        onFormSubmitted: function () {
+          const toast = document.getElementById("leadToast");
+          if (toast) toast.style.display = "block";
+          setTimeout(function () {
+            window.location.href = "#offers";
+          }, 650);
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>
